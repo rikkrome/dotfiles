@@ -1,4 +1,14 @@
 
+" COLOR_SCHEME----- {{{
+
+if has("termguicolors")
+set termguicolors
+endif
+
+colorscheme xcodewwdc
+
+
+" ----- }}}
 
 set relativenumber
 

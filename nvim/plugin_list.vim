@@ -9,12 +9,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'sheerun/vim-polyglot'
 
 " Appearance and Themes
-Plug 'morhetz/gruvbox'
+Plug 'arzg/vim-colors-xcode'
+
 
 " Autocompletion & Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-"Nav
+" Nav
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -32,4 +33,4 @@ Plug 'scrooloose/nerdcommenter' " // comment code
 
 
 call plug#end()
-"}}}
+" }}} -------
