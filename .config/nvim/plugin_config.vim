@@ -1,6 +1,10 @@
 " GRUVBOX Material ----- {{{
 
-colorscheme gruvbox
+if has("termguicolors")
+set termguicolors
+endif
+
+colorscheme xcodewwdc
 
 " }}}
 
@@ -41,7 +45,6 @@ let g:NERDTreeGitStatusWithFlags = 1
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
-  \ 'coc-tsserver',
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
