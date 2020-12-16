@@ -1,19 +1,7 @@
-" GRUVBOX Material ----- {{{
-
-if has("termguicolors")
-set termguicolors
-endif
-
-colorscheme xcodewwdc
-
-" }}}
-
-
 " NERDTree ----- {{{
-
 " open NERDTree automatically
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * NERDTree
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
@@ -42,6 +30,20 @@ let g:NERDTreeGitStatusWithFlags = 1
 
 " coc ----- {{{
   
+" if hidden is not set, TextEdit might fail.
+set hidden
+" Some servers have issues with backup files, see #649
+set nobackup
+set nowritebackup
+" Better display for messages
+set cmdheight=2
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+" always show signcolumns
+set signcolumn=yes
+
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
@@ -58,10 +60,10 @@ endfunction
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
-nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> <leader>gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader>gr <Plug>(coc-references)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
 

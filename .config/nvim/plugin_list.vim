@@ -1,13 +1,8 @@
-" #PLUGINS ----- {{{
 call plug#begin('~/.config/nvim/plugged')
 
-" Syntax Highlighting And Indentation For 100+ Languages
-"Plug 'sheerun/vim-polyglot'
 
 " Appearance and Themes
-"Plug 'morhetz/gruvbox'
 Plug 'arzg/vim-colors-xcode'
-
 
 " Autocompletion & Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -31,7 +26,4 @@ Plug 'scrooloose/nerdcommenter' " // comment code
 " coc
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
-
-
 call plug#end()
-" }}} -------

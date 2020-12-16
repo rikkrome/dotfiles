@@ -1,0 +1,132 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+# romero
+
+
+# ----- REACT NATIVE -----
+
+snippet rnf "reactNativeArrowFunctionComponent (React-Native snippets" b
+import React from 'react'
+import { View, Text } from 'react-native'
+
+const ${1:index} = () => {
+ return (
+   <View>
+     <Text></Text>
+   </View>
+  )
+}
+  
+export default ${2:$1}; 
+endsnippet
+
+# ---------------------------------------------
+
+snippet rns "RN StyleSheet snippet" b
+import { StyleSheet } from 'react-native';
+import { utils, device, fonts, fontSize, colors } from '../../design';
+
+const styles = StyleSheet.create({
+  container: {},
+  text:{
+    textTransform: 'uppercase',
+  }
+});
+
+export default styles;
+endsnippet
+
+# ---------------------------------------------
+
+snippet trycatch "Try-Catch Statement snippet" b
+try {
+
+} catch (error) {
+
+}
+endsnippet
+
+# ----REACT HOOKS-----------------------------------------
+
+snippet useCallback "useCallback snippet" b
+useCallback(() => {
+	callback
+},[input])
+endsnippet
+
+
+# ---------------------------------------------
+
+snippet useState "useState snippet" b
+const [state, setstate] = useState(initialState)
+endsnippet
+
+# ---------------------------------------------
+
+snippet useMemo "useMemo snippet" b
+useMemo(() => $0function, input)
+endsnippet
+
+# ---------------------------------------------
+
+snippet useEffect "useEffect snippet" b
+useEffect(() => {
+   // effect
+  return () => {
+    // cleanup
+  };
+}, [input]);
+endsnippet
+
+# ---- REDUX -----
+
+snippet useDispatch "react-redux: useDispatch, snippet" b
+const dispatch = useDispatch();
+endsnippet
+
+snippet dispatch "react-redux: useDispatch, snippet" b
+const dispatch = useDispatch();
+endsnippet
+
+snippet useSelector "react-redux: useSelector, snippet" b
+const ${1:data} = useSelector(state => state.${2:$1});
+endsnippet
+
+# ---- IMPORTS -----
+
+snippet import-redux "react-redux: useSelector, snippet" b
+import { useSelector, useDispatch } from 'react-redux';
+endsnippet
+
+# ---- HELPERS
+
+snippet getMessage "dictionary: getMessage" b
+const $0 = dictionary.getMessage('', '', 1, '')
+endsnippet
+
+snippet const-dictionary "react-redux: useSelector, snippet" b
+const dictionary = useSelector(state => state.dictionary);
+endsnippet
