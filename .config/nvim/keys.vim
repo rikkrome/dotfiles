@@ -37,3 +37,7 @@ nnoremap <C-p> :Files<CR>
 
 " }}}
 
+" Git 
+nmap <leader>gh :diffget //3
+nmap <leader>gu :diffget //2
+nmap <leader>gs :G<CR>

@@ -2,10 +2,15 @@ call plug#begin('~/.config/nvim/plugged')
 
 
 " Appearance and Themes
-Plug 'arzg/vim-colors-xcode'
+"Plug 'arzg/vim-colors-xcode'
+Plug 'morhetz/gruvbox'
 
 " Autocompletion & Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 
 " Nav
 Plug 'scrooloose/nerdtree'
