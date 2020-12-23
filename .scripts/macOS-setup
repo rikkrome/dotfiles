@@ -4,13 +4,78 @@ echo 'Are the Xcode command line tools installed?'
 echo 'If not exit using CMD+C, and install with:'
 echo 'xcode-select -install'
 
+
 read answer
 
-echo ' ' 
-echo 'What is your username on this system?'
-read uname
 
+#echo ' ' 
+#echo 'What is your username on this system?'
+#read uname
+
+sudo -v #Give sudo privileges ahead of time, so that we hopefully only have to enter a password once
+cd ~ #Moving to home directory at the beginning of the process
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" #Installing homebrew
+
+#<----------------Installing MacOS Apps, via Homebrew, Caks, & The App Store-------------------->
+brew=(
+  curl
+  fzf
+  neofetch
+  neovim
+  node
+  python
+  python@3.9
+  tmux
+  tree
+  watchman
+  yarn
+)
+
+cask=(
+  alacritty
+  firefox
+  lastpass
+  notion
+  rectangle
+  spotify
+  virtualbox
+  vlc
+)
+
+mas=(
+ 497799835 #Xcode 
+)
+
+git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask fetch --unshallow
+brew update
+#brew upgrade
+
+brew install ${brew[@]}
+brew install --cask ${cask[@]}
+mas install ${mas[@]}
+
+cd ~
+#mkdir repo
+#cd repo
+#git clone https://github.com/romerorickyio/dotfiles.git
+
+
+ln -s ~/repo-path-file ~/local-config-location
+ln -s ~/repo/dotfiles/.config ~/.config
+ln -s ~/repo/dotfiles/.zshrc ~/.zshrc
+ln -s ~/repo/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/repo/dotfiles/.config/nvim/init.vim ~/.vimrc
 
 #Installing Vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+echo 'Run ":PlugInstall" to install Vim Plugins, and then exit' >> ~/vimPlug
+vim ~/vimPlug #Opening Vim
+rm ~/vimPlug #Removing vimPlug
+
+./mac-preferences-setup
+
+echo 'Installation Complete'
+

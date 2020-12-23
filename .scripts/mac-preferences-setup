@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+
+echo "Preferences setup..."
+#<----------------Changing MacOS Specific Preferences-------------------->
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES #Show a path bar in the finder that shows the exact location
+defaults write com.apple.finder ShowPathbar -bool true #Adds the path bar to the bottom of the finder
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv" #Changes Default Finder View to List
+defaults write com.apple.finder WarnOnEmptyTrash -bool false #Removes Warning Before Emptying Trash
+defaults write com.apple.finder DisableAllAnimations -bool true #Disable Finder Animations
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false #Removes External Drives on Desktop
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false #Removes Internal Drives on Desktop
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false #Removes Mounted Servers on Desktop
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false #Removes Removable Media on Desktop
+defaults write com.apple.finder _FXSortFoldersFirst -bool true #Moves Folders to top When Sorting Alphabetically in Finder
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf" #Changes Default Finder Search to Current Folder Only
+defaults write com.apple.finder FXICloudDriveDesktop -bool NO #Doesn't Sync Desktop to iCloud
+defaults write com.apple.finder SidebarShowingiCloudDesktop -bool NO #Removes iCloud Desktop from Finder Sidebar
+defaults write com.apple.finder ShowStatusBar -bool YES #Shows Status Bar in Finder
+defaults write com.apple.finder SidebariCloudDriveSectionDisclosedState -bool NO #Makes Sure iCloud Drive is Showing in Finder Sidebar
+defaults write com.apple.finder FXArrangeGroupViewBy -string "Name" #Arranges Finder by Name By Default
+
+defaults write com.apple.dock autohide-time-modifier -int 0 #Sets Dock Autohide Time to O Seconds
+defaults write com.apple.dock autohide -bool true #Turns Dock Autohide ON
+defaults write com.apple.dock magnification -bool  NO #Turns off Dock Magnification
+defaults write com.apple.dock minimize-to-application -bool YES #Minimizing Applications to Their Respective Application Icon
+defaults write com.apple.dock showhidden -string  YES #Shows Hidden Applications in Dock
+defaults write com.apple.dock expose-animation-duration -string 0 #Setting Expose Animation to 0 Seconds
+defaults write com.apple.dock tilesize -int 36 #Setting Icon Size to 36 Pixels
+defaults write com.apple.dock mineffect -string "genie" #Changes Minimize to Dock Animation to "Genie" (Seems to be the fastest by my eye)
+defaults write com.apple.dock launchanim -bool false #Setting Launch Animation to False
+
+defaults write com.apple.NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool FALSE #Remove Save to iCloud Functionality
+defaults write com.apple.NSGlobalDomain AppleHighlightColor -string "1.000000 0.733333 0.721569 Red" #Setting Highlight Color to Red
+defaults write com.apple.NSGlobalDomain AppleShowAllExtensions -bool YES #Shows All File Extensions Always
+defaults write com.apple.NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool NO #Disables Double Space Bar- to Period
+#defaults write com.apple.NSGlobalDomain AppleMiniaturizeOnDoubleClick -bool NO #Disables Miniaturize on Double Click
+#defaults write com.apple.NSGlobalDomain AppleActionOnDoubleClick -string "Minimize" #Setting Double Click Action to Minimize
+defaults write com.apple.NSGlobalDomain AppleAccentColor -int 0 #Setting Apple Accent Color to Red
+defaults write com.apple.NSGlobalDomain NSUseAnimatedFocusRing -bool NO #Disabling Animated Focus Ring (The Blue Halo Around Input Fields & Stuff)
+defaults write com.apple.NSGlobalDomain AppleShowScrollBars -string "WhenScrolling" #Showing Scroll Bars Only When Scrolling
+defaults write com.apple.NSGlobalDomain NSTableViewDefaultSizeMode -int 1 #Sets Default Finder View Size to 1
+defaults write com.apple.NSGlobalDomain NSAutomaticCapitalizationEnabled -bool NO #Disabling Automatic Capitalization
+defaults write com.apple.NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true #Automatically Expanding Printer Dialog Box & NSNav Panel
+defaults write com.apple.NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write com.apple.NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write com.apple.NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+defaults write com.apple.NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false #Disabling Automatic Dash & Quote Substitution, Spell Correct
+defaults write com.apple.NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write com.apple.NSGlobalDomain NSWindowResizeTime -float 0.001 #Sets Windows Resize Time to the Minimize Possible
+defaults write com.apple.NSGlobalDomain com.apple.springing.enabled -bool false #Disabling App Springing Animation
+defaults write com.apple.NSGlobalDomain com.apple.springing.delay -float 0 
+
+defaults write com.apple.appstore WebKitDeveloperExtras -bool true #Enabling Developer Stuff in App Store
+defaults write com.apple.appstore ShowDebugMenu -bool true
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true #Fixing Automatic Software Updates
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
+defaults write com.apple.commerce AutoUpdate -bool true
+defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
+defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool FALSE #Delete Preview Window History On Close
+defaults write com.apple.mail DisableReplyAnimations -bool true #Disables Mail Reply & Send Animation
+defaults write com.apple.mail DisableSendAnimations -bool true
+defaults write com.apple.screencapture disable-shadow -bool TRUE #Disable Screen Capture Shadow
+defaults write com.apple.screencapture type JPG #Change Screenshot File Format to JPG
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true #Closes Print Dialog Box After Printing is Complete
+defaults write com.apple.TextEdit RichText -int 0 #Sets Texedit to Automatically Open in Plain Text
+defaults write com.apple.TextEdit PlainTextEncoding -int 4
+defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true #Automatically Play Movies When Opened in QuickTime
+
+killall dock
+killall Finder
+killall SystemUIServer
+killall Mail
+killall TextEdit
+killall QuickTimePlayerX
+killall Photos
