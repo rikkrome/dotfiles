@@ -93,3 +93,4 @@ node_modules
 .config/coc_temp/
 .config/zsh/.zsh_history
 .config/neofetch/
+.config/yarn
