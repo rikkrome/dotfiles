@@ -13,6 +13,16 @@
     "typescript.tsx",
     "graphql"
   ],
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "prettier.eslintIntegration": true,
-  "prettier.stylelintIntegration": true
+  "prettier.stylelintIntegration": true,
+  "prettier.disableSuccessMessage": true,
+  "tsserver.formatOnType": true,
+  "coc.preferences.formatOnType": true
 }

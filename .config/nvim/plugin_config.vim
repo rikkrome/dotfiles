@@ -47,10 +47,16 @@ set signcolumn=yes
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
-  \ 'coc-eslint', 
-  \ 'coc-prettier', 
   \ 'coc-json', 
   \ ]
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -64,12 +70,12 @@ nmap <silent> <leader>gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> <leader>gr <Plug>(coc-references)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-nnoremap <silent> <Leader>k :call <SID>show_documentation()<CR>
+nnoremap <silent> <Leader>sd :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -78,6 +84,22 @@ function! s:show_documentation()
   endif
 endfunction
 
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#float#has_float() == 0)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
+" custom coc action - https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim
+function! s:show_hover_doc()
+  call timer_start(500, 'ShowDocIfNoDiagnostic')
+endfunction
+
+autocmd CursorHoldI * :call <SID>show_hover_doc()
+autocmd CursorHold * :call <SID>show_hover_doc()
+
 " }}}
 
+" jsx & tsx
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
