@@ -1,0 +1,25 @@
+[user]
+	name = ricky romero
+	email = contact@romeroricky.com
+[commit]
+  template = .gitmessage
+[alias]
+  st = status
+  f = fetch
+  p = pull
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative
+  po = pull origin
+  puo = push -u origin
+  b = branch -vv
+  d = branch -d
+  D = branch -D
+  ssave = stash save
+  sl = stash list
+  spop = stash pop
+  sapply = stash apply
+  co = checkout
+  cob = checkout -b
+  ch = checkout -
+  pusm = git pull upstream master
+  # wslog = log --ignore-space-at-eol -p -w -b
+  # wsdiff = diff --ignore-space-at-eol -w -b --no-ext-diff
