@@ -2,7 +2,7 @@
 	name = ricky romero
 	email = contact@romeroricky.com
 [commit]
-  template = .gitmessage
+  template = ~/repo/dotfiles/.config/git/.gitmessage
 [alias]
   st = status
   f = fetch

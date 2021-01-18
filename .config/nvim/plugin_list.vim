@@ -32,6 +32,7 @@ Plug 'scrooloose/nerdcommenter' " // comment code
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
 "
+Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 call plug#end()

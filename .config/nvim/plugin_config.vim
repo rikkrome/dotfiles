@@ -67,11 +67,11 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 nmap <silent> <leader>gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> <leader>gy <Plug>(coc-type-definition)
+nmap <silent> <leader>gi <Plug>(coc-implementation)
 nmap <silent> <leader>gr <Plug>(coc-references)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader>]g <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>[g <Plug>(coc-diagnostic-prev)
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 

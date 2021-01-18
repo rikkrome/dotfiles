@@ -94,3 +94,4 @@ node_modules
 .config/zsh/.zsh_history
 .config/neofetch/
 .config/yarn
+.config/mozilla

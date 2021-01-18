@@ -35,12 +35,9 @@ brew=(
 cask=(
   alacritty
   firefox
-  lastpass
   notion
   rectangle
   spotify
-  virtualbox
-  vlc
 )
 
 mas=(
@@ -61,7 +58,7 @@ cd ~
 #git clone https://github.com/romerorickyio/dotfiles.git
 
 
-ln -s ~/repo-path-file ~/local-config-location
+#ln -s ~/repo-path-file ~/local-config-location
 ln -s ~/repo/dotfiles/.config ~/.config
 ln -s ~/repo/dotfiles/.zshrc ~/.zshrc
 ln -s ~/repo/dotfiles/.tmux.conf ~/.tmux.conf
@@ -75,7 +72,7 @@ echo 'Run ":PlugInstall" to install Vim Plugins, and then exit' >> ~/vimPlug
 vim ~/vimPlug #Opening Vim
 rm ~/vimPlug #Removing vimPlug
 
-./mac-preferences-setup
+#./mac-preferences-setup
 
 echo 'Installation Complete'
 
