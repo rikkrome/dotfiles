@@ -23,3 +23,5 @@
   pusm = git pull upstream master
   # wslog = log --ignore-space-at-eol -p -w -b
   # wsdiff = diff --ignore-space-at-eol -w -b --no-ext-diff
+[credential]
+	helper = osxkeychain
