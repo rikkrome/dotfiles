@@ -7,6 +7,7 @@ set fish_greeting ""
 if type -q exa
   alias ll "exa -l -g"
   alias lla "ll -a"
+  alias llt "exa -l -g --tree --level=2 --git-ignore --git"
 end
 
 set -x FZF_DEFAULT_COMMAND 'rg --files --follow --hidden'
