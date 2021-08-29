@@ -30,6 +30,8 @@ brew=(
   tree
   watchman
   yarn
+  fish
+  exa
 )
 
 cask=(
@@ -60,7 +62,7 @@ cd ~
 
 #ln -s ~/repo-path-file ~/local-config-location
 ln -s ~/repo/dotfiles/.config ~/.config
-ln -s ~/repo/dotfiles/.zshrc ~/.zshrc
+# ln -s ~/repo/dotfiles/config/zsh/.zshrc ~/.zshrc
 ln -s ~/repo/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/repo/dotfiles/.config/nvim/init.vim ~/.vimrc
 
@@ -73,6 +75,13 @@ vim ~/vimPlug #Opening Vim
 rm ~/vimPlug #Removing vimPlug
 
 #./mac-preferences-setup
+
+# fish setup
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+fisher install oh-my-fish/theme-robbyrussell
+fisher install jethrokuan/z
+fisher install oh-my-fish/plugin-peco
+
 
 echo 'Installation Complete'
 
