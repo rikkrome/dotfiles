@@ -15,7 +15,7 @@ read answer
 sudo -v #Give sudo privileges ahead of time, so that we hopefully only have to enter a password once
 cd ~ #Moving to home directory at the beginning of the process
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" #Installing homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" #Installing homebrew
 
 #<----------------Installing MacOS Apps, via Homebrew, Caks, & The App Store-------------------->
 brew=(
