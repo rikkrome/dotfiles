@@ -10,6 +10,8 @@ if type -q exa
   alias llt "exa -l -g --tree --level=2 --git-ignore --git"
 end
 
+alias vim "nvim"
+
 set -x FZF_DEFAULT_COMMAND 'rg --files --follow --hidden'
 
 # React native 
