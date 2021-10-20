@@ -25,7 +25,7 @@ function cd --description 'Change directory'
     end
 
     builtin cd $argv
-    ll
+    ll -la
     set -l cd_status $status
 
     if test $cd_status -eq 0 -a "$PWD" != "$previous"
