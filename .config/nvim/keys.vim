@@ -31,7 +31,7 @@ nmap <Tab>l :tabnext<Return>
 
 " Fzf ----- {{{
 
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :GFiles<CR>
 "nnoremap <Leader>b :Buffers<CR>
 "nnoremap <Leader>h :History<CR>
 
