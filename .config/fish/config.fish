@@ -12,7 +12,7 @@ end
 
 alias vim "nvim"
 
-set -x FZF_DEFAULT_COMMAND 'rg --files --follow --hidden'
+#set -x FZF_DEFAULT_COMMAND 'rg --files --follow --hidden'
 
 # React native 
 set -x ANDROID_HOME $HOME/Library/Android/sdk
