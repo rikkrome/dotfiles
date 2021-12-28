@@ -80,22 +80,22 @@ function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
-    call CocAction('doHover')
+    call CocAction('doHover', 0)
   endif
 endfunction
 
 function! ShowDocIfNoDiagnostic(timer_id)
   if (coc#float#has_float() == 0)
-    silent call CocActionAsync('doHover')
+    silent call CocActionAsync('doHover', 0)
   endif
 endfunction
 " custom coc action - https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim
 function! s:show_hover_doc()
-  call timer_start(500, 'ShowDocIfNoDiagnostic')
+  call timer_start(5000, 'ShowDocIfNoDiagnostic')
 endfunction
 
-autocmd CursorHoldI * :call <SID>show_hover_doc()
-autocmd CursorHold * :call <SID>show_hover_doc()
+"autocmd CursorHoldI * :call <SID>show_hover_doc()
+"autocmd CursorHold * :call <SID>show_hover_doc()
 
 " }}}
 

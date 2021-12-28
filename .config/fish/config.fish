@@ -20,3 +20,6 @@ set -x PATH $PATH $ANDROID_HOME/emulator
 set -x PATH $PATH $ANDROID_HOME/tools
 set -x PATH $PATH $ANDROID_HOME/tools/bin
 set -x PATH $PATH $ANDROID_HOME/platform-tools
+set -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/23.1.7779620
+#set -x JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
+set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home 
