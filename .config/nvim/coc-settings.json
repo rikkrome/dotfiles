@@ -4,6 +4,9 @@
   "diagnostic.hintSign": "⚠️",
   "diagnostic.infoSign": "⚠️",
   "suggest.noselect": false,
+  "codeLens.enable": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.implementationsCodeLens.enabled": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
@@ -11,7 +14,11 @@
     "json",
     "javascriptreact",
     "typescript.tsx",
-    "graphql"
+    "graphql",
+    "java",
+    "yaml",
+    "python",
+    "markdown"
   ],
   "eslint.autoFixOnSave": true,
   "eslint.filetypes": [
