@@ -7,7 +7,7 @@ set fish_greeting ""
 if type -q exa
   alias ll "exa -l -g"
   alias lla "ll -a"
-  alias llt "exa -l -g --tree --level=2 --git-ignore --git"
+  alias llt "exa -l -g -a --tree --level=2 --git-ignore --git"
 end
 
 alias vim "nvim"
