@@ -1,18 +1,18 @@
 window:
+  opacity: 0.85
   dimensions:
     columns: 150
     lines: 38
   padding:
-    x: 8
-    y: 8
+    x: 16
+    y: 16
   position:
     x: 0
     y: 0
-  decorations: buttonless 
+  decorations: buttonless
 scrolling:
   history: 10000
   multiplier: 3
-background_opacity: 0.85
 window.dynamic_title: true
 dynamic_padding: true
 
@@ -77,6 +77,7 @@ colors:
     text: '0xffffff'
     background: '0x555555'
     white:   '0xffffff'
+
 cursor:
   style: Block
   unfocused_hollow: true
@@ -84,3 +85,14 @@ cursor:
   #key_bindings:
     #  - { key: N, mods: Control, action: SpawnNewInstance }
 
+mouse:
+  # Click settings
+  #
+  # The `double_click` and `triple_click` settings control the time
+  # alacritty should wait for accepting multiple clicks as one double
+  # or triple click.
+  #double_click: { threshold: 300 }
+  #triple_click: { threshold: 300 }
+
+  # If this is `true`, the cursor is temporarily hidden when typing.
+  hide_when_typing: true
