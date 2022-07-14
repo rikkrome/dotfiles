@@ -1,5 +1,5 @@
 window:
-  opacity: 0.85
+  opacity: 1
   dimensions:
     columns: 150
     lines: 38
@@ -40,8 +40,8 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x181818'
-    foreground: '0xd8d8d8'
+    background: '#1e222a'
+    foreground: '#abb2bf'
 
   # Normal colors
   normal:
