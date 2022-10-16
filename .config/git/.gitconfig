@@ -19,7 +19,7 @@
 	old = red bold
 	new = green bold
 [commit]
-  template = ~/repo/dotfiles/.config/git/.gitmessage
+  template = ~/Developer//dotfiles/.config/git/.gitmessage
 [alias]
   st = status
   f = fetch
