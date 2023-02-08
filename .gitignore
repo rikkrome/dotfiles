@@ -95,3 +95,7 @@ node_modules
 .config/neofetch/
 .config/yarn
 .config/mozilla
+.config/nvim/plugin/packer_compiled.lua
+
+.config/nvimbackup
+.config/nvim_copy

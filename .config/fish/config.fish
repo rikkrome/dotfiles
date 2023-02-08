@@ -38,3 +38,11 @@ set -x PATH $PATH $ANDROID_SDK_ROOT/platform-tools
 set -x PATH $PATH $HOME/go/bin
 set -x PATH $PATH $HOME/.cargo/bin
 
+# PostgreSQL
+set -x PATH $PATH /Applications/Postgres.app/Contents/Versions/latest/bin
+
+# Rust CLIs
+set -x RN_CLI $HOME/Developer/react-native-cli/target/debug/react-native-cli
+# ---
+
+rvm default
