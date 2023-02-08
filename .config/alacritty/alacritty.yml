@@ -1,19 +1,19 @@
 window:
-  opacity: 1
+  opacity: 0.9
   dimensions:
     columns: 150
     lines: 38
   padding:
-    x: 16
-    y: 16
+    x: 8
+    y: 8
   position:
-    x: 0
-    y: 0
+    x: 75
+    y: 75
   decorations: buttonless
+  dynamic_title: true
 scrolling:
   history: 10000
   multiplier: 3
-window.dynamic_title: true
 dynamic_padding: true
 
 # Font configuration
@@ -40,7 +40,7 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#1e222a'
+    background: '#000000' # '#1e222a'
     foreground: '#abb2bf'
 
   # Normal colors
