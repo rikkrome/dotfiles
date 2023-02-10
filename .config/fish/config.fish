@@ -31,9 +31,12 @@ set -x PATH $PATH $ANDROID_SDK_ROOT/tools
 set -x PATH $PATH $ANDROID_SDK_ROOT/tools/bin
 set -x PATH $PATH $ANDROID_SDK_ROOT/platform-tools
 
-#set -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/23.1.7779620
+set -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/23.1.7779620
 #set -x JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
 #set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home 
+set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home 
+
+set -x PATH $PATH /usr/local/opt/openjdk/bin
 
 set -x PATH $PATH $HOME/go/bin
 set -x PATH $PATH $HOME/.cargo/bin
