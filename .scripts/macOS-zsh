@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# install oh-my-zsh - https://ohmyz.sh/#install
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions

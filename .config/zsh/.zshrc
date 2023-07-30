@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/usr/local/share/oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # NEOVIM
 # export PATH=$HOME/tools/nvim:$PATH
@@ -71,7 +71,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+    asdf
+    )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 #   -----------------------------
 #     ALIAS
 #   -----------------------------
-alias vim='nvim'
+# alias vim='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -167,30 +171,30 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 
 # React native 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/rickyromero/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/rickyromero/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/Users/rickyromero/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/rickyromero/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/rickyromero/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/rickyromero/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/Users/rickyromero/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/rickyromero/google-cloud-sdk/completion.zsh.inc'; fi
 
 # 
-export GOOGLE_APPLICATION_CREDENTIALS="/keys/app-learn-dev-fe3157362954.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="/keys/app-learn-dev-fe3157362954.json"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/rickyromero/.sdkman"
-[[ -s "/Users/rickyromero/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rickyromero/.sdkman/bin/sdkman-init.sh"
+# export SDKMAN_DIR="/Users/rickyromero/.sdkman"
+# [[ -s "/Users/rickyromero/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rickyromero/.sdkman/bin/sdkman-init.sh"
 
 
 # JAVA
-export JAVA_HOME=$HOME/Library/Java/JavaVirtualMachines/jdk-15.0.1.jdk/Contents/Home
-export PATH=$PATH:$JAVA_HOME/bin
-export PATH=$HOME/opt/apache-maven-3.6.3/bin:$PATH
+# export JAVA_HOME=$HOME/Library/Java/JavaVirtualMachines/jdk-15.0.1.jdk/Contents/Home
+# export PATH=$PATH:$JAVA_HOME/bin
+# export PATH=$HOME/opt/apache-maven-3.6.3/bin:$PATH
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
+# autoload -U +X bashcompinit && bashcompinit
+# complete -o nospace -C /usr/local/bin/terraform terraform

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# NOT USING FISH 
+
+# fish setup
+#fish
+#fish_add_path /opt/homebrew/bin
+# echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
+
+# chsh -s /opt/homebrew/bin/fish
+# curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+
+# fisher install edc/bass
+# fisher install oh-my-fish/theme-robbyrussell
+# fisher install jethrokuan/z
+# fisher install oh-my-fish/plugin-peco

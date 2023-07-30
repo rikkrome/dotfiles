@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+#Installing homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+#<----------------Installing MacOS Apps, via Homebrew, Caks, & The App Store-------------------->
+brew=(
+  curl
+  tmux
+  tree
+  coreutils
+  readline
+  libyaml
+  gmp
+  watchman
+)
+
+cask=(
+  alacritty
+  rectangle
+)
+
+brew install ${brew[@]}
+brew install --cask ${cask[@]}

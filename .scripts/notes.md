@@ -1,5 +1,5 @@
 exe file 
-chmod u+x somefile
+chmod +x FILE_NAME
 
 
 link files

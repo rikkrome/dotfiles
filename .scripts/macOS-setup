@@ -1,33 +1,11 @@
 #!/usr/bin/env bash
 
 sudo -v #Give sudo privileges ahead of time, so that we hopefully only have to enter a password once
-cd ~ #Moving to home directory at the beginning of the process
+# cd ~ #Moving to home directory at the beginning of the process
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" #Installing homebrew
-
-#<----------------Installing MacOS Apps, via Homebrew, Caks, & The App Store-------------------->
-brew=(
-  curl
-  fzf
-  neofetch
-  neovim
-  node
-  tmux
-  tree
-  watchman
-  yarn
-  fish
-  exa
-  zexit
-)
-
-cask=(
-  alacritty
-  rectangle
-)
-
-brew install ${brew[@]}
-brew install --cask ${cask[@]}
+./macOS-vm
+./macOS-homebrew
+./macOS-zsh
 
 
 # 
@@ -36,21 +14,7 @@ brew install --cask ${cask[@]}
 ln -s ~/Developer/dotfiles/.config ~/.config
 ln -s ~/Developer/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/Developer/dotfiles/.config/git/.gitconfig ~/.gitconfig
-
-
-# fish setup
-#fish
-#fish_add_path /opt/homebrew/bin
-# echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
-
-# chsh -s /opt/homebrew/bin/fish
-# curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-
-# fisher install edc/bass
-# fisher install oh-my-fish/theme-robbyrussell
-# fisher install jethrokuan/z
-# fisher install oh-my-fish/plugin-peco
-
+ln -s ~/Developer/dotfiles/.config/zsh/.zshrc ~/.zshrc
 
 echo 'Installation Complete'
 
