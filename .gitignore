@@ -102,3 +102,5 @@ node_modules
 .config/github-copilot/*
 .config/github-copilot/hosts.json
 .config/fish/fish_variables
+
+.config/installs/golang/*
