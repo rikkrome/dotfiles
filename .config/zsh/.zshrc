@@ -170,6 +170,12 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 
+#Golang install directory
+# /Users/rickyromero/.asdf/installs/golang/1.20.6/packages/bin/hello
+# go env -w GOBIN=$HOME/.config/installs/golang/packages/bin
+export PATH=$PATH:$HOME/.config/installs/golang/packages/bin
+
+
 # React native 
 # export ANDROID_HOME=$HOME/Library/Android/sdk
 # export PATH=$PATH:$ANDROID_HOME/emulator
