@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 #   -----------------------------
 #     ALIAS
 #   -----------------------------
-# alias vim='nvim'
+ alias vim='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -204,3 +204,38 @@ export PATH=$PATH:$HOME/.config/installs/golang/packages/bin
 
 # autoload -U +X bashcompinit && bashcompinit
 # complete -o nospace -C /usr/local/bin/terraform terraform
+
+# PostgreSQL
+# export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+# export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+# export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/rickyromero/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/rickyromero/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/rickyromero/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/rickyromero/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+ export LANG=en_US.UTF-8
+
+export PATH=$PATH:$(go env GOPATH)/bin/
+
+export C_INCLUDE_PATH=/usr/local/include
+export CPLUS_INCLUDE_PATH=/usr/local/include
+
+# pnpm
+export PNPM_HOME="/Users/rickyromero/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

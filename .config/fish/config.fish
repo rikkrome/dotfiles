@@ -46,3 +46,11 @@ set -x RN_CLI $HOME/Developer/react-native-cli/target/debug/react-native-cli
 # ---
 
 rvm default
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /Users/rickyromero/anaconda3/bin/conda
+    eval /Users/rickyromero/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+end
+# <<< conda initialize <<<
+
