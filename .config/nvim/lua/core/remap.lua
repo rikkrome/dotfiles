@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "projet view" })
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "projet view" })
 
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- move hightlight up
