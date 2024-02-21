@@ -2,12 +2,12 @@ local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 
 local fb_actions = telescope.extensions.file_browser.actions
+local media_actions = telescope.extensions.media_files.media_files
 
 telescope.setup {
   extensions = {
     file_browser = {
       theme = "dropdown",
-      hijack_netrw = true,
       mappings = {
         ["i"] = {
           ["<C-h>"] = fb_actions.goto_home_dir,
@@ -19,10 +19,15 @@ telescope.setup {
         },
       },
     },
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = { "png", "webp", "jpg", "jpeg" },
+    }
   },
 }
 
-telescope.load_extension "file_browser"
+telescope.load_extension("file_browser", "frecency", "media_files")
 
 vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = "find files" })
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
@@ -32,3 +37,5 @@ vim.keymap.set('n', '<leader>ps', function()
 end, { desc = "grep search" })
 
 vim.keymap.set('n', '<leader>pv', ":Telescope file_browser<CR>", { noremap = true, desc = "project view file browser" })
+
+vim.keymap.set('n', '<leader>pm', media_actions, { desc = "find media" })
