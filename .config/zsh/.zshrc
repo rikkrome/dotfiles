@@ -140,6 +140,9 @@ trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the 
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 
+# Docker rename
+alias docker='podman'
+
 #   ---------------------------
 #     Git
 #   ---------------------------
@@ -171,7 +174,7 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 
 #Golang install directory
-# /Users/rickyromero/.asdf/installs/golang/1.20.6/packages/bin/hello
+# /Users/$USER/.asdf/installs/golang/1.20.6/packages/bin/hello
 # go env -w GOBIN=$HOME/.config/installs/golang/packages/bin
 export PATH=$PATH:$HOME/.config/installs/golang/packages/bin
 
@@ -184,17 +187,17 @@ export PATH=$PATH:$HOME/.config/installs/golang/packages/bin
 # export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # The next line updates PATH for the Google Cloud SDK.
-# if [ -f '/Users/rickyromero/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/rickyromero/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/Users/$USER/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/$USER/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-# if [ -f '/Users/rickyromero/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/rickyromero/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/Users/$USER/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/$USER/google-cloud-sdk/completion.zsh.inc'; fi
 
 # 
 # export GOOGLE_APPLICATION_CREDENTIALS="/keys/app-learn-dev-fe3157362954.json"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-# export SDKMAN_DIR="/Users/rickyromero/.sdkman"
-# [[ -s "/Users/rickyromero/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rickyromero/.sdkman/bin/sdkman-init.sh"
+# export SDKMAN_DIR="/Users/$USER/.sdkman"
+# [[ -s "/Users/$USER/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
 
 
 # JAVA
@@ -205,21 +208,16 @@ export PATH=$PATH:$HOME/.config/installs/golang/packages/bin
 # autoload -U +X bashcompinit && bashcompinit
 # complete -o nospace -C /usr/local/bin/terraform terraform
 
-# PostgreSQL
-# export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
-# export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
-# export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/rickyromero/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/$USER/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/rickyromero/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/rickyromero/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/$USER/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/$USER/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/rickyromero/anaconda3/bin:$PATH"
+        export PATH="/Users/$USER/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -233,7 +231,7 @@ export C_INCLUDE_PATH=/usr/local/include
 export CPLUS_INCLUDE_PATH=/usr/local/include
 
 # pnpm
-export PNPM_HOME="/Users/rickyromero/Library/pnpm"
+export PNPM_HOME="/Users/$USER/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
