@@ -32,6 +32,8 @@ telescope.load_extension("file_browser", "frecency", "media_files")
 vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = "find files" })
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>pgf', builtin.git_files, { desc = "project git files" })
+vim.keymap.set('n', '<leader>pgs', ":Telescope git_status<CR>", { noremap = true, desc = "Git File Diff Preview" })
+vim.keymap.set('n', '<leader>gf', ":Telescope git_status<CR>", { noremap = true, desc = "Git File Diff Preview" })
 vim.keymap.set('n', '<leader>ps', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end, { desc = "grep search" })
@@ -40,4 +42,3 @@ vim.keymap.set('n', '<leader>pv', ":Telescope file_browser<CR>", { noremap = tru
 
 vim.keymap.set('n', '<leader>pm', media_actions, { desc = "find media" })
 
-vim.keymap.set('n', '<leader>pgs', ":Telescope git_status<CR>", { noremap = true, desc = "Git Status" })

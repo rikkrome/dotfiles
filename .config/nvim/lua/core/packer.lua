@@ -23,7 +23,10 @@ return require('packer').startup(function(use)
   use("nvim-treesitter/playground")
   use("theprimeagen/harpoon")
   use("mbbill/undotree")
+  -- Git
   use("tpope/vim-fugitive")
+  use("lewis6991/gitsigns.nvim")
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
