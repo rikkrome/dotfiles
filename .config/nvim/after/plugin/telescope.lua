@@ -34,7 +34,8 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>pgf', builtin.git_files, { desc = "project git files" })
 vim.keymap.set('n', '<leader>pgs', ":Telescope git_status<CR>", { noremap = true, desc = "Git File Diff Preview" })
 vim.keymap.set('n', '<leader>gf', ":Telescope git_status<CR>", { noremap = true, desc = "Git File Diff Preview" })
-vim.keymap.set('n', '<leader>ps', function()
+vim.keymap.set('n', '<leader>psl', builtin.live_grep, { desc = "grep live"})
+vim.keymap.set('n', '<leader>pss', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end, { desc = "grep search" })
 

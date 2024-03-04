@@ -13,6 +13,7 @@ brew=(
   libyaml
   gmp
   watchman
+  ripgrep
 )
 
 cask=(
