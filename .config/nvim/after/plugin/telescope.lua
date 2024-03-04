@@ -37,6 +37,7 @@ vim.keymap.set('n', '<leader>ps', function()
 end, { desc = "grep search" })
 
 vim.keymap.set('n', '<leader>pv', ":Telescope file_browser<CR>", { noremap = true, desc = "project view file browser" })
+vim.keymap.set('n', '<leader>pe', vim.cmd.Ex, { noremap = true, desc = "project Ex" })
 
 vim.keymap.set('n', '<leader>pm', media_actions, { desc = "find media" })
 
