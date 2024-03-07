@@ -20,7 +20,13 @@ return {
 
     local mappings = {
       ["<leader>"] = {
-        p = { name = "Projects" },
+        p = {
+          name = "Projects ->",
+          g = { name = "Git -> " },
+          s = { name = "Search -> " }
+        },
+        g = { name = "Git ->" },
+        s = { name = "Search ->" },
       },
     }
 
