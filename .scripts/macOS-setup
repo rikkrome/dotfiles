@@ -12,7 +12,7 @@ sudo -v #Give sudo privileges ahead of time, so that we hopefully only have to e
 # ln -s ~/repo-path-file ~/local-config-location
 # 
 ln -s ~/Developer/dotfiles/.config ~/.config
-ln -s ~/Developer/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/Developer/dotfiles/.config/tmux/.tmux.conf ~/.tmux.conf
 ln -s ~/Developer/dotfiles/.config/git/.gitconfig ~/.gitconfig
 ln -s ~/Developer/dotfiles/.config/zsh/.zshrc ~/.zshrc
 
