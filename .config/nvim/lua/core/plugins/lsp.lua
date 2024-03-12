@@ -76,10 +76,13 @@ local lspconfig_plugin = {
     --- if you want to know more about lsp-zero and mason.nvim
     --- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
     lsp_zero.on_attach(function(client, bufnr)
+      local opts = {buffer = bufnr, remap = false}
       -- see :help lsp-zero-keybindings
       -- to learn the available actions
       lsp_zero.default_keymaps({ buffer = bufnr })
       vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', { buffer = bufnr })
+      vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+
     end)
 
     require('mason-lspconfig').setup({
