@@ -48,3 +48,8 @@ vim.keymap.set('n', '<A-UP>', '<C-w>k')
 vim.keymap.set('n', '<A-DOWN>', '<C-w>j')
 vim.keymap.set('n', '<A-LEFT>', '<C-w>h')
 vim.keymap.set('n', '<A-RIGHT>', '<C-w>l')
+
+-- basic 
+vim.keymap.set('n', '<leader>w', vim.cmd.w, { desc = "Save" })
+vim.keymap.set('n', '<leader>q', vim.cmd.wq, { desc = "Save & Quit" })
+vim.keymap.set('n', '<leader>e', vim.cmd.e, { desc = "Reload file" })
