@@ -1,6 +1,49 @@
 [user]
 	name = ricky romero
 	email = contact@romeroricky.com
+
+[core]
+	editor = vim  # or your preferred editor
+	autocrlf = input  # for Linux/Unix line endings
+	ignorecase = false
+
+[commit]
+  template = ~/Developer/dotfiles/.config/git/.gitmessage
+
+[pull]
+	rebase = false  # or true if you prefer rebasing
+
+[init]
+	defaultBranch = main
+
+[push]
+	default = simple
+
+[alias]
+  s = status -s
+  cm = commit -m
+  undo = reset HEAD~1
+  last = show --name-only
+  st = status
+  f = fetch
+  p = pull
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative
+  po = pull origin
+  puo = push -u origin
+  b = branch -vv
+  d = branch -d
+  D = branch -D
+  ssave = stash save
+  sl = stash list
+  spop = stash pop
+  sapply = stash apply
+  co = checkout
+  cob = checkout -b
+  ch = checkout -
+  pusm = pull upstream master
+  graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+  graphfull = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%n%b'
+
 [color]
 	branch = auto
 	diff = auto
@@ -18,30 +61,3 @@
 	frag = magenta bold
 	old = red bold
 	new = green bold
-[commit]
-  template = ~/Developer//dotfiles/.config/git/.gitmessage
-[alias]
-  st = status
-  f = fetch
-  p = pull
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative
-  po = pull origin
-  puo = push -u origin
-  b = branch -vv
-  d = branch -d
-  D = branch -D
-  ssave = stash save
-  sl = stash list
-  spop = stash pop
-  sapply = stash apply
-  co = checkout
-  cob = checkout -b
-  ch = checkout -
-  pusm = git pull upstream master
-  graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
-  graphfull = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%n%b'
-
-  # wslog = log --ignore-space-at-eol -p -w -b
-  # wsdiff = diff --ignore-space-at-eol -w -b --no-ext-diff
-[credential]
-	helper = osxkeychain
