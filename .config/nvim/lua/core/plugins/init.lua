@@ -10,4 +10,14 @@ return {
   { 'L3MON4D3/LuaSnip' },
   { 'rafamadriz/friendly-snippets' },
   -- amongst your other plugins
+  {
+    "echasnovski/mini.icons",
+    version = false,
+  },
+  {
+    "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("nvim-web-devicons").setup()
+    end,
+  }
 }

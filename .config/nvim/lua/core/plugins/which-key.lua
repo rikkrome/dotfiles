@@ -12,24 +12,19 @@ return {
         spelling = { enabled = true },
         presets = { operators = false },
       },
-      window = {
-        --border = "rounded",
+      win = {
         padding = { 4, 4, 4, 4 },
       },
     }
 
     local mappings = {
-      ["<leader>"] = {
-        p = {
-          name = "Projects ->",
-          g = { name = "Git -> " },
-          s = { name = "Search -> " }
-        },
-        g = { name = "Git ->" },
-        s = { name = "Search ->" },
-      },
-    }
+    { "<leader>g", group = "Git ->" },
+    { "<leader>p", group = "Projects ->" },
+    { "<leader>pg", group = "Project Git -> " },
+    { "<leader>ps", group = "Project Search -> " },
+    { "<leader>s", group = "Search ->" },
+  }
 
-    wk.register(mappings)
+    wk.add(mappings)
   end
 }
